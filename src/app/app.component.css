@@ -1,0 +1,15 @@
+.flex {
+  display: flex;
+}
+
+.table-bordered {
+  text-align: center;
+}
+
+.min-h {
+  min-height: 50px;
+}
+
+li {
+  list-style: none;
+}

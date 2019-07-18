@@ -1,0 +1,150 @@
+<div class="container table-bordered p-0">
+  <div class="col-12 p-0 flex">
+    <div class="col-3 table-bordered">Toppings</div>
+    <div class="col-9 p-0">
+      <div class="col-12 p-0 table-bordered">Pizza Size</div>
+      <div class="col-12 p-0 flex">
+        <div class="col-3 table-bordered">Small ($5)</div>
+        <div class="col-3 table-bordered">Medium ($7)</div>
+        <div class="col-3 table-bordered">Large ($8)</div>
+        <div class="col-3 table-bordered">Extra Large ($9)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 p-2 flex"> Veg Toppings</div>
+
+  <div class="col-12 p-0 flex">
+    <div class="col-3 table-bordered text-lg-left min-h">Tomatoes ( $1.00)</div>
+    <div class="col-9 p-0">
+      <ul class="col-12 p-0 flex mb-0" #col1>
+        <li class="col-3 table-bordered min-h" *ngFor="let option of Id1; let i = index;">
+          <input type="checkbox" (change)="selectCheckbox(col1, i)" value={{option.value}}/>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12 p-0 flex">
+    <div class="col-3 table-bordered text-lg-left min-h">Onions ($0.50)</div>
+    <div class="col-9 p-0">
+      <ul class="col-12 p-0 flex mb-0" #col2>
+        <li class="col-3 table-bordered min-h" *ngFor="let option of Id2; let i = index;">
+          <input type="checkbox" (change)="selectCheckbox(col2,i)" value={{option.value}}/>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12 p-0 flex">
+    <div class="col-3 table-bordered text-lg-left min-h">Bell pepper ($1.00)</div>
+    <div class="col-9 p-0">
+      <ul class="col-12 p-0 flex mb-0" #col3>
+        <li class="col-3 table-bordered min-h" *ngFor="let option of Id3; let i = index;">
+          <input type="checkbox" (change)="selectCheckbox(col3,i)" value={{option.value}}/>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12 p-0 flex">
+    <div class="col-3 table-bordered text-lg-left min-h">Mushrooms ($1.20)</div>
+    <div class="col-9 p-0">
+      <ul class="col-12 p-0 flex mb-0" #col4>
+        <li class="col-3 table-bordered min-h" *ngFor="let option of Id4; let i = index;">
+          <input type="checkbox" (change)="selectCheckbox(col4,i)" value={{option.value}}/>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12 p-0 flex">
+    <div class="col-3 table-bordered text-lg-left min-h">Pineapple ($0.75)</div>
+    <div class="col-9 p-0">
+      <ul class="col-12 p-0 flex mb-0" #col5>
+        <li class="col-3 table-bordered min-h" *ngFor="let option of Id5; let i = index;">
+          <input type="checkbox"
+                 (change)="selectCheckbox(col5,i)"
+                 value={{option.value}}/>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12 p-2 flex"> Non-Veg Toppings</div>
+
+  <div class="col-12 p-0 flex">
+    <div class="col-3 table-bordered text-lg-left min-h">Sausage ($1.00)</div>
+    <div class="col-9 p-0">
+      <ul class="col-12 p-0 flex mb-0" #col6>
+        <li class="col-3 table-bordered min-h" *ngFor="let option of Id6; let i = index;">
+          <input type="checkbox"
+                 (change)="selectCheckbox(col6,i)"
+                 value={{option.value}}/>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12 p-0 flex">
+    <div class="col-3 table-bordered text-lg-left min-h">Pepperoni ($2.00)</div>
+    <div class="col-9 p-0">
+      <ul class="col-12 p-0 flex mb-0" #col7>
+        <li class="col-3 table-bordered min-h" *ngFor="let option of Id7; let i = index;">
+          <input type="checkbox"
+                 (change)="selectCheckbox(col7,i)"
+                 value={{option.value}}/>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12 p-0 flex">
+    <div class="col-3 table-bordered text-lg-left min-h">Barbecue chicken ($3.00)</div>
+    <div class="col-9 p-0">
+      <ul class="col-12 p-0 flex mb-0" #col8>
+        <li class="col-3 table-bordered min-h" *ngFor="let option of Id8; let i = index;">
+          <input type="checkbox"
+                 (change)="selectCheckbox(col8,i)"
+                 value={{option.value}}/>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12 p-2 flex">
+    <div class="col-3 text-lg-left min-h">Total</div>
+    <div class="col-9 p-0">
+      <div class="col-12 p-0 flex mb-0">
+        <div class="col-3 min-h">{{roundN(col1Result, 2)}}</div>
+        <div class="col-3 min-h">{{roundN(col2Result, 2)}}</div>
+        <div class="col-3 min-h">{{roundN(col3Result, 2)}}</div>
+        <div class="col-3 min-h">{{roundN(col4Result, 2)}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 p-0 flex">
+    <div class="col-3 table-bordered text-lg-left min-h">Offer</div>
+    <div class="col-9 p-0">
+      <div class="col-12 p-0 flex">
+        <div class="col-3 table-bordered min-h"></div>
+        <div class="col-3 table-bordered min-h" style="text-decoration: line-through">{{2.75}}</div>
+        <div class="col-3 table-bordered min-h"></div>
+        <div class="col-3 table-bordered min-h"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 p-0 flex">
+    <div class="col-3 table-bordered text-lg-left min-h"></div>
+    <div class="col-9 p-0">
+      <div class="col-12 p-0 flex">
+        <div class="col-3 table-bordered min-h"></div>
+        <div class="col-3 table-bordered min-h">{{sub(roundN(col2Result, 2), 2.75)}}</div>
+        <div class="col-3 table-bordered min-h"></div>
+        <div class="col-3 table-bordered min-h"></div>
+      </div>
+    </div>
+  </div>
+</div>
